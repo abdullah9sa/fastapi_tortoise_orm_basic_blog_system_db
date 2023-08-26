@@ -1,0 +1,18 @@
+# Python/Django files
+*.pyc
+*.pyo
+__pycache__
+
+# Django static files
+staticfiles/
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore database files
+
+# Ignore media files
+media/
+
+migrations/
