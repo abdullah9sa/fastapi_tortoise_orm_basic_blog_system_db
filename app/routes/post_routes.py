@@ -2,6 +2,8 @@ from fastapi import APIRouter, HTTPException, Query
 from typing import List
 from app.models.post import *
 from app.models.user import User
+from app.schemas.post_models import *
+from app.schemas.user_models import *
 
 router = APIRouter()
 

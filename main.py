@@ -1,10 +1,9 @@
-# Task 2 - Abdullah Salih
+# Task 6 - Abdullah Salih
 
 from fastapi import FastAPI
 from app.dependencies.database import Tortoise, init_tortoise,close_tortoise
-from app.routes import user_routes, post_routes
+from app.routes import user_routes, post_routes,comment_routes
 from fastapi.testclient import TestClient
-from tests.user_routes_test import *
 
 app = FastAPI()
 client = TestClient(app)
@@ -20,6 +19,7 @@ async def shutdown_db():
 
 app.include_router(user_routes.router, prefix="/users", tags=["users"])
 app.include_router(post_routes.router, prefix="/posts", tags=["posts"])
+app.include_router(comment_routes.router, prefix="/comments", tags=["comments"])
 
 if __name__ == "__main__":
     import uvicorn

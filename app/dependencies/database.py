@@ -3,7 +3,7 @@ from tortoise import Tortoise
 async def init_tortoise(app):
     await Tortoise.init(
         db_url='sqlite://db.sqlite3',  # Change this to your database URL
-        modules={'models': ['app.models.user', 'app.models.post']},  # List of model modules
+        modules={'models': ['app.models.user', 'app.models.post','app.models.comment']},  # List of model modules
     )
     await Tortoise.generate_schemas()
     
